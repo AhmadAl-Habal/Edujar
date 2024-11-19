@@ -15,7 +15,6 @@ import photography from "../../assets/Photography.png";
 const icons = import.meta.glob("../../assets/*.svg", { eager: true });
 
 const Categories = () => {
-  console.log(icons);
 
   return (
     <div className="categories">

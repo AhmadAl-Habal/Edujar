@@ -3,7 +3,7 @@ import Course from "./Course.jsx";
 import lessonIcon from "../../assets/course-lesson-icon.png";
 import brandIcon from "../../assets/brand-icon2.png";
 const CoursesList = () => {
-  let list = [1, 2, 3, 4, 5, 6];
+
   let listContent = [
     {
       index: 0,
