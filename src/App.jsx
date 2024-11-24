@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import image from "./assets/image.png";
 import "./index.css";
 function App() {
   const [loginResponse, setLoginResponse] = useState(null);
@@ -9,6 +8,12 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [token, setToken] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    setSelectedImage(file); // Store the selected file
+  };
   const registerEndpoint = async () => {
     const formData = new FormData();
     formData.append("first_name", "next");
@@ -114,20 +119,22 @@ function App() {
       return;
     }
 
+    if (!selectedImage) {
+      alert("Please select an image.");
+      return;
+    }
+
     setLoading(true);
     setError(null);
 
     try {
-      const response = await fetch(image);
-      const blob = await response.blob();
-
-      // Convert Blob to File
-      const file = new File([blob], "image.png", { type: blob.type });
+      // Prepare FormData
       const formData = new FormData();
-      formData.append("name", "iphone xxx");
-      formData.append("price", "515");
-      formData.append("image", file);
+      formData.append("name", "iphone x");
+      formData.append("price", "500");
+      formData.append("image", selectedImage); // Append the user-selected image
 
+      // Make the API request
       const apiResponse = await fetch("https://vica.website/api/items", {
         method: "POST",
         headers: {
@@ -138,12 +145,12 @@ function App() {
       });
 
       if (!apiResponse.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${apiResponse.status}`);
       }
 
       const result = await apiResponse.json();
-      setAddItemResponse(result); // Save the add item response
-      console.log("Add Item Response:", result); // Log the response
+      setAddItemResponse(result);
+      console.log("Add Item Response:", result);
     } catch (error) {
       setError(error.message);
       alert(`Error during adding item: ${error.message}`);
@@ -240,7 +247,7 @@ function App() {
         </div>
       </div>
       {/* Get items Section */}
-      <div className="endpoint login ml-10 my-10">
+      <div className="endpoint show ml-10 my-10">
         <h1>Show all items GET Method</h1>
         <h2>Endpoint: https://vica.website/api/items</h2>
         <div className="flex">
@@ -276,8 +283,8 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="endpoint login ml-10 my-10">
-        <h1>Show all items GET Method</h1>
+      <div className="endpoint add ml-10 my-10">
+        <h1>Add item POST Method</h1>
         <h2>Endpoint: https://vica.website/api/items</h2>
         <div className="flex">
           <div className="request-body">
@@ -288,6 +295,21 @@ function App() {
             <h1>Request HEADERS:</h1>
             <div className="flex">
               <h3>Accept: </h3> <p>application/json</p>
+            </div>
+            <h1>Request Body:</h1>
+            <div className="flex">
+              <h3>name: </h3> <p>samsung s20</p>
+            </div>
+            <div className="flex">
+              <h3>price: </h3> <p>2451</p>
+            </div>
+
+            <div className="flex">
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange} // Handle image file selection
+              />
             </div>
           </div>
           <div className="mr-10">
@@ -307,7 +329,7 @@ function App() {
                   ? JSON.stringify(addItemResponse)
                   : "No response yet"}
               </h2>
-            )}
+            )}{" "}
           </div>
         </div>
       </div>

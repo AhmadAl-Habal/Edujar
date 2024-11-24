@@ -43,3 +43,15 @@ margin: 0 auto;
   padding: 0.3rem;
   border-radius: 25px;
 }
+.show {
+  border: green 1px solid;
+  background-color: rgb(139, 38, 167);
+  padding: 0.3rem;
+  border-radius: 25px;
+}
+.add {
+  border: green 1px solid;
+  background-color: rgb(225, 168, 62);
+  padding: 0.3rem;
+  border-radius: 25px;
+}
