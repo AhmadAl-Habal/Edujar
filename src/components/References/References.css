@@ -1,0 +1,67 @@
+.references {margin-top: -12rem;
+margin-bottom: 5rem;
+}
+
+
+.references .standing-women-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.references .reference-card {
+    background-image: url("../../assets/categories-background.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    color: #fff;
+    padding: 4rem 3rem ;
+    text-align: center;
+}
+
+.references .reference-card h1 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+.references .reference-card h4 {
+    margin-bottom: 2rem;
+    color: #E1EFFF;
+    font-weight: 400;
+    line-height: 2.5;
+    font-size: 1rem;
+}
+.references .reference-card h3 {
+    margin-bottom: 2rem;
+}
+.references .reference-card img {
+    margin-bottom: 2rem;
+}
+
+.references .reference-card .swap-arrow {
+    color: #fff;
+    font-size: 30px;
+}
+
+.references .reference-card .reference-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.references .reference-card .reference-slider img {
+    margin: 0 0.5rem;
+}
+
+@media (max-width: 700px){
+    .references {
+        margin-top: 5rem;
+        }
+    .references .standing-women-container img {
+    display: none;
+}
+.references .reference-card {
+    margin: auto 1rem;
+}
+}

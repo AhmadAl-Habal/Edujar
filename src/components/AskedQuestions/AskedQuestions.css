@@ -1,0 +1,84 @@
+.asked-questions {
+    display: flex;
+    color: #fff;
+    padding: 0 1rem;
+}
+.asked-questions .frequently-asked{
+    width: 35%;
+}
+.asked-questions .frequently-asked h2{
+    color: #D9ECFF;
+    font-size: 1.5rem;
+margin-bottom: 1rem;
+font-weight: 400;
+}
+.asked-questions .frequently-asked h1{
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.asked-questions .frequently-asked button{
+    color: #FFFFFF;
+    background-color: #FAB437;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.asked-questions .questions{
+    width: 60%;
+}
+
+.asked-questions .questions .question .first-row{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 2rem;
+}
+
+.asked-questions .questions .question .first-row h1{
+    color: #fff;
+    font-size: 1.5rem;
+
+font-weight: 600;
+}
+.asked-questions .questions .question .first-row h2{
+    color: #D9ECFF;
+    font-size: 2rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+.asked-questions .questions .question h3{
+    color: #D9ECFF;
+    font-size: 1rem;
+margin-bottom: 1rem;
+font-weight: 400;
+}
+
+.asked-questions .questions .question hr{
+margin: 2rem 0;
+
+}
+
+@media (max-width: 700px){
+    .asked-questions {
+        flex-direction: column;
+    }
+    .asked-questions .frequently-asked{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .asked-questions .questions{
+        width: 100%;
+        text-align: center;
+    }
+    .swap-arrow {
+        display: none;
+         
+     }
+}

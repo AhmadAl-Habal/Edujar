@@ -1,0 +1,65 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 1rem;
+    margin-bottom: 7rem;
+}
+
+.hero h1 {
+    max-width: 80%;
+    margin: 0 auto;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 0.9;
+}
+
+.hero h4 {
+    max-width: 80%;
+    margin: 0 auto;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 0.9;
+    color: #D9ECFF;
+}
+
+.hero .hero-input {
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+.hero .hero-input input {
+    width:70%;
+    padding:  0.8rem;
+    border-radius: 25px;
+    color: #D9ECFF;
+    background-color: #3D4E64;
+    outline: none;
+    border: 0;
+    font-style: italic;
+}
+
+.hero .hero-input button {
+    margin-left: -4.4rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 25px;
+    background-color: #FAB437;
+    color: #364C65;
+    border: 0;
+    cursor: pointer;
+    
+}
+.hero .hero-input button:hover {
+    color: #D9ECFF
+}
+
+
+
+  @media (max-width: 1000px){
+    .hero img{
+       display: none;
+    }
+    .hero .hero-content {margin: 0 auto;}
+   
+}

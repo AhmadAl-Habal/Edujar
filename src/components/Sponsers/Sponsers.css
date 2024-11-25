@@ -1,0 +1,17 @@
+.sponsers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+
+}
+
+.sponsers .swap-arrow {
+    color: #fff;
+    font-size: 30px;
+}
+
+.sponsers img {
+    margin: 0 2rem;
+}

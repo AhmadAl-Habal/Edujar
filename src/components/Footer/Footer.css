@@ -1,0 +1,93 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  margin-bottom: 5rem;
+}
+
+.footer .footer-logo-section {
+  width: 30%;
+  min-width: 200px;
+  margin-bottom: 1rem;
+}
+
+.footer .footer-logo-section img{
+  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer .footer-logo-section h4 {
+  color: #D9ECFF;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  word-spacing: 4px;
+}
+
+.footer .footer-logo-section h3 {
+  color: #FFF;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.footer .footer-logo-section h3 span{
+  color: #FAB437;
+}
+
+.footer .footer-links-section {
+  width: 15%;
+  min-width: 100px;
+}
+
+.footer .footer-links-section ul{
+  list-style-type: none;
+}
+
+.footer .footer-links-section li{
+  font-size: 0.9rem;
+  color: #D9ECFF;
+  margin-bottom: 0.5rem;
+}
+
+.footer .footer-sub-section {
+  width: 20%;
+  min-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer .footer-sub-section input{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-bottom: 0.5rem;
+  color: #D9ECFF;
+  font-family: "Koho";
+}
+
+.footer .footer-sub-section hr{
+  background-color: #D9ECFF;
+  margin-bottom: 1rem;
+  height: 0.5px;
+  color: #D9ECFF;
+}
+
+.footer .footer-sub-section button{
+  background-color: #21B573;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  width: 70%;
+  color: #D9ECFF;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.footer h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-family: "Koho";
+}
